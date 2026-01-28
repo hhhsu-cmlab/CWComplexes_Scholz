@@ -1,0 +1,8 @@
+CWComplex
+CWComplex.ofFiniteSet
+CWComplex.finite_ofFiniteSet
+attachCellFiniteType
+finite_attachCellFiniteType
+ofEq
+finite_ofEq
+FiniteDimensional

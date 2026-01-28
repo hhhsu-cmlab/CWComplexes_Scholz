@@ -1,6 +1,6 @@
 import Mathlib.Analysis.Normed.Module.Ball.Homeomorph
 import Mathlib.Geometry.Manifold.Instances.Sphere
-import CWcomplexes.Auxiliary
+--import CWcomplexes.Auxiliary
 import CWcomplexes.RelConstructions
 
 /-!
@@ -28,7 +28,7 @@ variable {X : Type*} [t : TopologicalSpace X] [T2Space X]
 @[simps! -isSimp]
 def mapLT {a b : ℝ} (hab : a < b) := (IsometryEquiv.funUnique (Fin 1) ℝ).toHomeomorph.trans
     (affineHomeomorph ((b - a) / 2) ((a + b) / 2) (by linarith))
-
+#check mapLT
 /-- `mapLT` sends the closed unit ball to the desired closed interval. -/
 lemma mapLT_image_closedBall {a b : ℝ} (hab : a < b) : mapLT hab '' closedBall 0 1 = Icc a b := by
   change (((affineHomeomorph ((b - a) / 2) ((a + b) / 2) (by linarith))) ∘
